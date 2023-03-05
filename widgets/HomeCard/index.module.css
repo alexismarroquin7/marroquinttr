@@ -1,0 +1,12 @@
+.root {
+  display: flex;
+  flex-flow: column wrap;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.card {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 1rem;
+}

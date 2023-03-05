@@ -1,3 +1,13 @@
+:root {
+  --color-primary: #0F4C81; /* dark blue */
+  --color-secondary: #F5A623; /* orange */
+  --color-tertiary: #FFFFFF; /* white */
+  --white: #fff; 
+  --black: #000;
+  --red: #ff0000;
+  --border-radius-primary: .5rem;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,4 +16,61 @@
   box-sizing: border-box;
 }
 
+h1 {
+  font-size: 4rem;
+}
 
+h2 {
+  font-size: 2.6rem;
+}
+
+h3 {
+  font-size: 2.4rem;
+}
+
+h4 {
+  font-size: 2.2rem;
+}
+
+h5 {
+  font-size: 2rem;
+}
+
+h6 {
+  font-size: 1.8rem;
+}
+
+p,
+select,
+option,
+input,
+ul,
+ol,
+div,
+button,
+label,
+nav
+{
+  font-size: 1.6rem;
+}
+
+a, span 
+{
+  font-size: inherit;
+}
+
+a {
+  color: var(--color-secondary);
+}
+
+button {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: var(--border-radius-primary);
+  font-weight: bold;
+  cursor: pointer;
+
+  padding: 1rem;
+}
