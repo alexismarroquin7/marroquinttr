@@ -1,11 +1,16 @@
 :root {
-  --color-primary: #0F4C81; /* dark blue */
-  --color-secondary: #F5A623; /* orange */
-  --color-tertiary: #FFFFFF; /* white */
+  
   --white: #fff; 
   --black: #000;
   --red: #ff0000;
+  
   --border-radius-primary: .5rem;
+  
+  --color-primary: #084B8A; /*(a rich, royal blue that feels both industrial and vintage)*/
+  --color-secondary: #8F1E2D; /*(a bold, bright red that adds some contrast to the primary color)*/
+  --color-tertiary: #4C4C4C; /*(a dark, slate gray that can be used for text and accents)*/
+  --color-accent: #FFD6B3; /*(a soft, peachy tone that adds some warmth and nostalgia)*/
+  --color-background: #F2F2F2; /*(a light, neutral gray that serves as the main background color)*/
 }
 
 * {
@@ -14,6 +19,11 @@
   font-size: 62.5%;
   font-family: 'Roboto', sans-serif;
   box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-terciary);
 }
 
 h1 {
@@ -60,13 +70,16 @@ a, span
 }
 
 a {
-  color: var(--color-secondary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 button {
   background-color: var(--color-primary);
-  color: white;
-  padding: 12px 20px;
+  color: var(--color-background);
   border: none;
   border-radius: var(--border-radius-primary);
   font-weight: bold;

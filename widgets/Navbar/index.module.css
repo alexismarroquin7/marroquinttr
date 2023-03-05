@@ -7,4 +7,6 @@
   padding: 1rem 2rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   min-width: 270px;
+  background-color: var(--white);
+  color: var(--color-primary)
 }
