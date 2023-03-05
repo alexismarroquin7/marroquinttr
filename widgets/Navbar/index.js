@@ -1,4 +1,3 @@
-import Link from "next/link"
 import styles from "./index.module.css";
 import { MobileMenu } from "./MobileMenu";
 import { useToggle } from "../../hooks";
@@ -13,9 +12,7 @@ export const Navbar = () => {
       className={styles.root}
     >
 
-      <Link href="/">
-        Marroquin
-      </Link>
+      <h4>Marroquin</h4>
       
       <MenuIcon
         onClick={(e) => {
@@ -25,7 +22,13 @@ export const Navbar = () => {
         open={active}
       >Menu</MenuIcon>
       
-      <MobileMenu open={active}/>
+      <MobileMenu 
+        open={active}
+        onClose={(e) => {
+          e.preventDefault();
+          toggle();
+        }}
+      />
     
     </nav>
   )

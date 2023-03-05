@@ -1,19 +1,25 @@
-import Link from "next/link";
 import { links } from "../../data/links";
 import styles from "./MobileMenu.module.css";
+import { useRouter } from "next/router";
 
-export const MobileMenu = ({open = false}) => {
+export const MobileMenu = ({ open = false, onClose }) => {
+  
+  const router = useRouter();
+
   return <div className={`${styles.root} ${open ? styles.open : ""}`}>
     <div className={styles.link_list}>
       {links.map(link => (
-        <Link
+        <button
           key={link.id}
-          href={link.href}
+          onClick={(e) => {
+            router.push(link.href);
+            typeof onClose === 'function' && onClose(e);
+          }}
         >
           <p>
             {link.name}
           </p>
-        </Link>
+        </button>
       ))}
     </div>
   </div>
