@@ -28,6 +28,31 @@ export const services = {
       id: uuid(),
       name: 'Emergency Roadside Assistance',
       description: 'Breakdowns can happen anytime, anywhere, which is why we offer 24/7 emergency roadside assistance. Whether you need a jump start, fuel delivery, or a tow, our experienced technicians are ready to help.'
+    },
+    {
+      id: uuid(),
+      name: "Battery Maintenance and Replacement",
+      description: "Checking the battery, cables, terminals, and replacing the battery if necessary."
+    },
+    {
+      id: uuid(),
+      name: "Engine Diagnostics",
+      description: "Using specialized tools and equipment to diagnose and troubleshoot engine problems."
+    },
+    {
+      id: uuid(),
+      name: "Fuel System Services",
+      description: "Cleaning, repairing, and maintaining the fuel system, including fuel filters, fuel injectors, and fuel pumps."
+    },
+    {
+      id: uuid(),
+      name: "Hydraulic System Services",
+      description: "Repairing and maintaining the hydraulic system, including hydraulic pumps, valves, hoses, and cylinders."
+    },
+    {
+      id: uuid(),
+      name: "Transmission Services",
+      description: "Inspecting, repairing, and maintaining the transmission, including checking the fluid level, changing the fluid, and replacing parts as necessary."
     }
   ]
 }

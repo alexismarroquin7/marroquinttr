@@ -1,26 +1,79 @@
 
+import { useEffect, useReducer } from "react";
 import { services } from "../../data/services";
 import styles from "./index.module.css";
+import { ServicesSearchBox } from "./ServicesSearchBox";
+
+const initialState = {
+  list: services.list
+  .sort((a, b) => a.name.toLowerCase().localeCompare(b.name.toLowerCase())),
+  dir: 'asc',
+  query: ''
+}
+
+const reducer = (state, { type, payload }) => {
+  switch(type){
+    case 'sort/asc':
+      return {
+        ...state,
+        dir: 'asc',
+        list: state.list
+        .sort((a, b) => a.name.toLowerCase().localeCompare(b.name.toLowerCase())),
+      }
+    case 'sort/desc':
+      return {
+        ...state,
+        dir: 'desc',
+        list: state.list
+        .sort((a, b) => b.name.toLowerCase().localeCompare(a.name.toLowerCase())),
+      }
+    case 'query':
+
+      return {
+        ...state,
+        list: services.list
+        .filter((item) => {
+          let regex = new RegExp(payload.query, 'i');
+          return regex.test(item.name); // outputs true
+        }),
+        query: payload.query
+        
+      }
+    default:
+      throw Error(`unkown action.type: ${type}`);
+  }
+}
 
 export const Services = () => {
+  
+  const [state, dispatch] = useReducer(reducer, initialState);
+
+  const handleChange = e => {
+    const { name, value} = e.target;
+
+    if(name === 'dir'){
+      dispatch({ type: `sort/${state.dir === 'asc' ? 'desc' : 'asc'}` });
+    } else if (name === 'query') {
+      dispatch({ type: `query`, payload: { query: value } });
+    }
+  }
+
+  useEffect(() => {
+    dispatch({type: `sort/${state.dir}`});
+  }, [state.dir]);
+
   return <section
     className={styles.root}
   >
-    <h3>{services.title}</h3>
+    <h3 className="title_text">{services.title}</h3>
     <p>{services.description}</p>
     
     <div
       className={styles.services_list}
     >
-      <label
-        className={styles.search_box}
-      >Search for a service (ex. Oil Seal)
-        <input 
-          placeholder="Search"
-        />
-      </label>
+      <ServicesSearchBox query={state.query} dir={state.dir} onChange={handleChange}/>
       
-      {services.list.map(item => {
+      {state.list.map(item => {
         return <div
           key={item.id}
         >
@@ -29,6 +82,7 @@ export const Services = () => {
           >• {item.name}</p>
         </div>
       })}
+      
     </div>
   </section>
 }

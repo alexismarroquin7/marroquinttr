@@ -15,10 +15,11 @@ export const MobileMenu = ({ open = false, onClose }) => {
             router.push(link.href);
             typeof onClose === 'function' && onClose(e);
           }}
+          className={styles.link_item}
         >
-          <p>
-            {link.name}
-          </p>
+
+          {link.name}
+
         </button>
       ))}
     </div>

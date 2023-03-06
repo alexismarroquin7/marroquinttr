@@ -12,17 +12,3 @@
   gap: 2rem;
 }
 
-.search_box {
-  color: var(--color-primary);
-  width: 100%;
-  display: flex;
-  flex-flow: column wrap;
-  gap: .5rem;
-}
-
-.search_box input {
-  width: 100%;
-  padding: 1rem;
-  border-radius: var(--border-radius-primary);
-  border: .2rem solid var(--color-secondary);
-}

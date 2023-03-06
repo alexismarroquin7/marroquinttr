@@ -5,23 +5,18 @@
   gap: 2rem;
 }
 
-.locations {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-}
-
-.location_column {
-  width: 50%;
+.payment_type_list {
   display: flex;
   flex-flow: column wrap;
   padding: 2rem;
   gap: 2rem;
+  padding-left: 2rem;
 }
 
-.location_column ul {
-  padding-left: 2rem;
+.sub_payment_type_list {
   display: flex;
   flex-flow: column wrap;
-  gap: 2rem;
+  padding: 2rem;
+  gap: 1rem;
+  padding-left: 4rem;
 }

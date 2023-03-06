@@ -4,3 +4,26 @@
   padding: 2rem;
   gap: 2rem;
 }
+
+
+.line {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-end;
+  gap: 2rem;
+  font-weight: bold;
+  padding: 2rem 0;
+}
+
+.line_label {
+  display: flex;
+  width: 100%;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  gap: 1rem;
+  font-weight: bold;
+}
+
+.line a {
+  color: var(--color-primary);
+}

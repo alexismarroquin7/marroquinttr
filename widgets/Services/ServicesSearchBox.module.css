@@ -1,0 +1,41 @@
+.root {
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+.search_box {
+  color: var(--color-primary);
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  gap: .5rem;
+}
+
+.search_box input {
+  width: 100%;
+  padding: 1rem;
+  border-radius: var(--border-radius-primary);
+  border: .2rem solid var(--color-primary);
+}
+
+.select_dir {
+  border: .2rem solid var(--color-primary);
+  background-color: var(--color-background);
+  color: var(--color-primary);
+  padding: .2rem;
+  border-radius: .5rem;
+  
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+
+  transition: all .2s;
+}
+
+.select_dir.desc {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+}

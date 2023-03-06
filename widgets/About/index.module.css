@@ -4,3 +4,9 @@
   padding: 2rem;
   gap: 2rem;
 }
+
+.description {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 1rem;
+}

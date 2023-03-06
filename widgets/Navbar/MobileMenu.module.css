@@ -1,24 +1,34 @@
 .root {
-  display: none;
+  display: hidden;
   width: 100%;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  top: 6rem;
+  position: fixed;
+  top: -100%;
   right: 0;
-  bottom: 0;
+  bottom: 100%;
   left: 0;
   background-color: var(--color-primary);
   transition: all .2s;
+  z-index: 999;
 }
 
 .root.open {
   display: flex;
+
+  top: 6rem;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .link_list {
   display: flex;
   flex-flow: column wrap;
-  gap: 1.6rem;
+  gap: 2rem;
   align-items: center;
+}
+
+.link_item {
+  font-size: 2rem;
 }

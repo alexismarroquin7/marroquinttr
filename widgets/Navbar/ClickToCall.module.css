@@ -1,0 +1,22 @@
+.root {
+  background-color: var(--white);
+  color: var(--color-primary);
+  border: .2rem solid var(--color-primary);
+  
+  padding: .25rem;
+  border-radius: .5rem;
+  display: flex;
+  flex-flow: row wrap;
+  gap: .5rem;
+  align-items: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+  transition: all .2s;
+}
+
+.root:hover {
+  background-color: var(--color-primary);
+  color: var(--white);
+  border: .2rem solid var(--color-primary);
+  text-decoration: none;
+}
