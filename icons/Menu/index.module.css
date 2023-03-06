@@ -1,0 +1,41 @@
+.root {
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+}
+
+.path_a,
+.path_b,
+.path_c {
+  stroke-width: 10;
+  stroke: var(--color-primary);
+  transition: all .2s;
+}
+
+.path_a {
+  d: path("M 0 5, 100 5");
+}
+
+.path_b {
+  d: path("M 0 50, 100 50");
+}
+
+.path_c {
+  d: path("M 0 95, 100 95");
+}
+
+.open {
+  stroke: var(--red);
+}
+
+.path_a.open {
+  d: path("M 5 5, 95 95");
+}
+
+.path_b.open {
+  opacity: 0;
+}
+
+.path_c.open {
+  d: path("M 5 95, 95 5");
+}

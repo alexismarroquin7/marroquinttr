@@ -1,3 +1,18 @@
+:root {
+  
+  --white: #fff; 
+  --black: #000;
+  --red: #ff0000;
+  
+  --border-radius-primary: .5rem;
+  
+  --color-primary: #084B8A; /*(a rich, royal blue that feels both industrial and vintage)*/
+  --color-secondary: #8F1E2D; /*(a bold, bright red that adds some contrast to the primary color)*/
+  --color-tertiary: #4C4C4C; /*(a dark, slate gray that can be used for text and accents)*/
+  --color-accent: #FFD6B3; /*(a soft, peachy tone that adds some warmth and nostalgia)*/
+  --color-background: #F2F2F2; /*(a light, neutral gray that serves as the main background color)*/
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,4 +21,74 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: var(--color-background);
+  color: var(--color-terciary);
+}
 
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 2.6rem;
+}
+
+h3 {
+  font-size: 2.4rem;
+}
+
+h4 {
+  font-size: 2.2rem;
+}
+
+h5 {
+  font-size: 2rem;
+}
+
+h6 {
+  font-size: 1.8rem;
+}
+
+p,
+select,
+option,
+input,
+ul,
+ol,
+li,
+div,
+button,
+label,
+nav
+{
+  font-size: 1.6rem;
+}
+
+a, span 
+{
+  font-size: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+  border: none;
+  border-radius: var(--border-radius-primary);
+  font-weight: bold;
+  cursor: pointer;
+
+  padding: 1rem;
+}
+
+.title_text {
+  color: var(--color-primary);
+}

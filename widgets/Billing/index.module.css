@@ -1,0 +1,22 @@
+.root {
+  display: flex;
+  flex-flow: column wrap;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.payment_type_list {
+  display: flex;
+  flex-flow: column wrap;
+  padding: 2rem;
+  gap: 2rem;
+  padding-left: 2rem;
+}
+
+.sub_payment_type_list {
+  display: flex;
+  flex-flow: column wrap;
+  padding: 2rem;
+  gap: 1rem;
+  padding-left: 4rem;
+}

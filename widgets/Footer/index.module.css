@@ -1,0 +1,19 @@
+.root {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  padding: 2rem;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  width: 100%;
+  gap: 2rem;
+}
+
+.link {
+  font-weight: bold;
+  color: var(--white);
+}
+
+.bottom_text {
+  text-align: center;
+}
