@@ -1,14 +1,6 @@
-.root {
-  display: flex;
-  flex-flow: column wrap;
-  padding: 2rem;
-  gap: 2rem;
-}
 
 .services_list {
   display: flex;
   flex-flow: column wrap;
-  padding: 2rem 0;
-  gap: 2rem;
 }
 

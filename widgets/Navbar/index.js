@@ -3,7 +3,6 @@ import { MobileMenu } from "./MobileMenu";
 import { useToggle } from "../../hooks";
 import { Menu as MenuIcon } from "../../icons/Menu";
 import { ClickToCall } from "./ClickToCall";
-
 export const Navbar = () => {
   
   const { active, toggle } = useToggle();
@@ -17,25 +16,30 @@ export const Navbar = () => {
 
       <h4>Marroquin</h4>
       
-      <ClickToCall/>
+      <div
+        className={styles.right_container}
+      >
+        <ClickToCall/>
 
-      <MenuIcon
-        onClick={(e) => {
-          e.preventDefault();
-          toggle();
-        }}
-        open={active}
-      >Menu</MenuIcon>
-      
-      <MobileMenu 
-        open={active}
-        onClose={(e) => {
-          e.preventDefault();
-          toggle();
-        }}
-      />
+        <MenuIcon
+          onClick={(e) => {
+            e.preventDefault();
+            toggle();
+          }}
+          open={active}
+        >Menu</MenuIcon>
+      </div>
       
     </nav>
+    
+    <MobileMenu 
+      open={active}
+      onClose={(e) => {
+        e.preventDefault();
+        toggle();
+      }}
+    />
+    
     <div className={styles.spacer}></div>
     </>
   )

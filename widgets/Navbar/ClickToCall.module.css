@@ -1,10 +1,10 @@
 .root {
-  background-color: var(--white);
-  color: var(--color-primary);
+  background-color: var(--color-primary);
+  color: var(--white);
   border: .2rem solid var(--color-primary);
   
-  padding: .25rem;
-  border-radius: .5rem;
+  padding: .5rem 1rem;
+  border-radius: 8rem;
   display: flex;
   flex-flow: row wrap;
   gap: .5rem;
@@ -12,6 +12,7 @@
   font-size: 1.6rem;
   font-weight: bold;
   transition: all .2s;
+  box-shadow: var(--box-shadow-primary);
 }
 
 .root:hover {

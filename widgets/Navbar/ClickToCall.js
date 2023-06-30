@@ -7,7 +7,7 @@ export const ClickToCall = () => {
   return (
   <Link className={styles.root} type="tel" href={contact.lines[0].href}>
     <PhoneIcon fontSize="inherit"/>
-    Click To Call
+    Call Us
   </Link>
   );
 }

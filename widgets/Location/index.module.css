@@ -1,27 +1,15 @@
-.root {
-  display: flex;
-  flex-flow: column wrap;
-  padding: 2rem;
-  gap: 2rem;
-}
 
 .locations {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
+  flex-flow: column wrap;
+  background-color: var(--background-color-primary);
+  list-style-type: none;
 }
 
-.location_column {
-  width: 50%;
-  display: flex;
-  flex-flow: column wrap;
+.locations li {
   padding: 2rem;
-  gap: 2rem;
 }
 
-.location_column ul {
-  padding-left: 2rem;
-  display: flex;
-  flex-flow: column wrap;
-  gap: 2rem;
+.locations li:nth-child(even) {
+  background-color: var(--background-color-secondary);
 }

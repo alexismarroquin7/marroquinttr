@@ -21,7 +21,6 @@ export default function Home() {
       </Head>
       
       <HomeCard/>
-
       <Services/>
       <Contact/>
       <Location/>

@@ -1,19 +1,23 @@
 
+import { Section } from "@/components/Section";
 import { billing } from "../../data/billing";
 import styles from "./index.module.css";
 
 export const Billing = () => {
-  return <section
-    className={styles.root}
+  return <Section
   >
     <h3 className="title_text">{billing.title}</h3>
+
     <p>{billing.description}</p>
     
     <ul
       className={styles.payment_type_list}
     >
       {billing.payment_types.map(payment_type => {
-        return <li key={payment_type.name}>
+        return <li 
+          key={payment_type.name}
+          className={styles.payment_type}
+        >
           {payment_type.name}
           {Array.isArray(payment_type.sub_types) && (
             <ul
@@ -33,5 +37,5 @@ export const Billing = () => {
 
     <p>{billing.bottom_text}</p>
     
-  </section>
+  </Section>
 }
