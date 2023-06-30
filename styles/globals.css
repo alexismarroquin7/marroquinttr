@@ -11,6 +11,13 @@
   --color-tertiary: #4C4C4C; /*(a dark, slate gray that can be used for text and accents)*/
   --color-accent: #FFD6B3; /*(a soft, peachy tone that adds some warmth and nostalgia)*/
   --color-background: #F2F2F2; /*(a light, neutral gray that serves as the main background color)*/
+
+
+  --background-color-primary: #fff;
+  --background-color-secondary: #eeeeee;
+
+  --box-shadow-primary: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  
 }
 
 * {
@@ -22,12 +29,12 @@
 }
 
 body {
-  background-color: var(--color-background);
+  background-color: var(--background-color-secondary);
   color: var(--color-terciary);
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 2.8rem;
 }
 
 h2 {
@@ -85,10 +92,19 @@ button {
   border-radius: var(--border-radius-primary);
   font-weight: bold;
   cursor: pointer;
-
+  font-size: 2rem;
   padding: 1rem;
 }
 
 .title_text {
   color: var(--color-primary);
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }

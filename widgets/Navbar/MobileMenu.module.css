@@ -1,21 +1,21 @@
 .root {
   display: hidden;
   width: 100%;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  position: fixed;
   top: -100%;
   right: 0;
   bottom: 100%;
   left: 0;
-  background-color: var(--color-primary);
+  /* background-color: var(--color-primary); */
   transition: all .2s;
+  
+  position: fixed;
   z-index: 999;
 }
 
 .root.open {
   display: flex;
-
   top: 6rem;
   right: 0;
   bottom: 0;
@@ -23,12 +23,26 @@
 }
 
 .link_list {
+  width: 100%;
   display: flex;
   flex-flow: column wrap;
-  gap: 2rem;
   align-items: center;
+  padding: 0 2rem;
 }
 
 .link_item {
-  font-size: 2rem;
+  font-size: 1.8rem;
+  border-bottom: .2rem solid var(--white);
+  border-radius: 0;
+  padding: 4rem;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.link_item:last-child {
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
 }

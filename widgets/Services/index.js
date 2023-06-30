@@ -3,6 +3,8 @@ import { useEffect, useReducer } from "react";
 import { services } from "../../data/services";
 import styles from "./index.module.css";
 import { ServicesSearchBox } from "./ServicesSearchBox";
+import { ServiceItem } from "./ServiceItem";
+import { Section } from "@/components/Section";
 
 const initialState = {
   list: services.list
@@ -62,27 +64,17 @@ export const Services = () => {
     dispatch({type: `sort/${state.dir}`});
   }, [state.dir]);
 
-  return <section
-    className={styles.root}
-  >
+  return <Section>
     <h3 className="title_text">{services.title}</h3>
     <p>{services.description}</p>
     
     <div
       className={styles.services_list}
-    >
-      <ServicesSearchBox query={state.query} dir={state.dir} onChange={handleChange}/>
-      
+    > 
       {state.list.map(item => {
-        return <div
-          key={item.id}
-        >
-          <p
-            style={{fontWeight: "bold"}}
-          >• {item.name}</p>
-        </div>
+        return <ServiceItem key={item.id} service={item}/>
       })}
       
     </div>
-  </section>
+  </Section>
 }

@@ -1,16 +1,21 @@
-.root {
-  display: flex;
-  flex-flow: column wrap;
-  padding: 2rem;
-  gap: 2rem;
-}
 
 .payment_type_list {
+  width: 100%;
   display: flex;
   flex-flow: column wrap;
+  list-style-type: none;
+}
+
+.payment_type {
+  border-top: .2rem solid var(--background-color-secondary);
+  background-color: white;
   padding: 2rem;
-  gap: 2rem;
-  padding-left: 2rem;
+}
+
+.payment_type:nth-child(even) {
+
+  background-color: var(--background-color-secondary)
+
 }
 
 .sub_payment_type_list {
@@ -19,4 +24,5 @@
   padding: 2rem;
   gap: 1rem;
   padding-left: 4rem;
+  list-style-type: none;
 }

@@ -10,30 +10,8 @@ export const billing = {
       name: 'Checks'
     },
     {
-      name: "Major credit cards, including:",
-      sub_types: [
-        {
-          name: 'Visa'
-        },
-        {
-          name: "American Express"
-        }
-      ]
-    },
-    {
-      name: "Mobile payment options, such as:",
-      sub_types: [
-        {
-          name: 'PayPal'
-        },
-        {
-          name: "Venmo"
-        }
-      ]
-    },
-    {
-      name: "Financing options for qualified customers"
-    },
+      name: "Credit card (Visa, American Express, Mastercard, etc.)"
+    }
   ],
   bottom_text: `Don't hesitate to contact us if you have any questions about our payment options or need help choosing the one that works best for you. We're here to help.`
 }
