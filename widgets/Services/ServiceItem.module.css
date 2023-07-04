@@ -12,6 +12,16 @@
   gap: 2rem;
 }
 
+.first {
+  border-top-left-radius: var(--border-radius-primary);
+  border-top-right-radius: var(--border-radius-primary);
+}
+
+.last {
+  border-bottom-left-radius: var(--border-radius-primary);
+  border-bottom-right-radius: var(--border-radius-primary);
+}
+
 .service_item_summary {
   border-radius: 0;
   width: 100%;

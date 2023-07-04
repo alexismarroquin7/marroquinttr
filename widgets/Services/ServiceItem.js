@@ -7,12 +7,12 @@ import {
 
 import styles from "./ServiceItem.module.css";
 
-export const ServiceItem = ({service}) => {
+export const ServiceItem = ({service, index, count}) => {
   const [open, setOpen] = useState(false);
   const toggleOpen = () => setOpen(!open);
 
   return <div
-    className={styles.service_item}
+    className={`${styles.service_item} ${index === 0 && styles.first} ${index === count-1 && styles.last}`}
     onClick={toggleOpen}
   >
     

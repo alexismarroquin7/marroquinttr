@@ -3,6 +3,7 @@ import styles from "../styles/Home.module.css";
 
 import { About, Contact, HomeCard, Location, Services } from '@/widgets';
 import { Billing } from '@/widgets/Billing';
+import { GridOverlay } from '@/components';
 
 export default function Home() {
   return (
@@ -19,6 +20,11 @@ export default function Home() {
 
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      
+      {/* <GridOverlay
+        rows={9}
+        columns={5}
+      /> */}
       
       <HomeCard/>
       <Services/>

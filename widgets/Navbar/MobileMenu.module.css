@@ -7,7 +7,6 @@
   right: 0;
   bottom: 100%;
   left: 0;
-  /* background-color: var(--color-primary); */
   transition: all .2s;
   
   position: fixed;
@@ -31,18 +30,25 @@
 }
 
 .link_item {
-  font-size: 1.8rem;
-  border-bottom: .2rem solid var(--white);
+  font-size: 1.6rem;
+  border-top: .2rem solid #eee;
   border-radius: 0;
-  padding: 4rem;
+  padding: 4rem 2rem;
   width: 100%;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
   justify-content: space-between;
+  background-color: var(--white);
+  color: var(--color-primary);
 }
 
 .link_item:last-child {
   border-bottom-left-radius: 2rem;
   border-bottom-right-radius: 2rem;
+}
+
+.divider {
+  background-color: var(--color-primary);
+  padding: .2rem;
 }

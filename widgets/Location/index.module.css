@@ -1,13 +1,27 @@
 
+.container {
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  gap: 2rem;
+}
+
 .locations {
   display: flex;
   flex-flow: column wrap;
   background-color: var(--background-color-primary);
   list-style-type: none;
+  border-radius: var(--border-radius-primary);
+  box-shadow: var(--box-shadow-primary);
 }
 
 .locations li {
   padding: 2rem;
+  color: var(--color-primary);
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  gap: 1rem;
 }
 
 .locations li:nth-child(even) {

@@ -7,29 +7,37 @@ import { Section } from "@/components/Section";
 export const Contact = () => {
   return <Section
   >
-    <h3 className="title_text">{contact.title}</h3>
-    <p>{contact.description}</p>
+    <div
+      className={styles.container}
+    >
+      <h3 className="title_text">{contact.title}</h3>
+      <p>{contact.description}</p>
+    </div>
 
-    {contact.lines.map(line => {
-      return <div
-        key={line.id}
-        className={styles.line}
-      >
-        <div
-          className={styles.line_label} 
+    <div
+      className={styles.container}
+    >
+      {contact.lines.map(line => {
+        return <div
+          key={line.id}
+          className={styles.line}
         >
-          {line.icon()}
-          <Link
-            type={line.type}
-            href={line.href}
-            target={line.target}
+          <div
+            className={styles.line_label} 
           >
-            
-            {line.title}
-          </Link>
+            {line.icon()}
+            <Link
+              type={line.type}
+              href={line.href}
+              target={line.target}
+            >
+              
+              {line.title}
+            </Link>
+          </div>
         </div>
-      </div>
-    })}
+      })}
+    </div>
     
   </Section>
 }

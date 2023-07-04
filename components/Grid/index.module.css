@@ -1,0 +1,21 @@
+.grid {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.width--1 {
+
+}
+.width--2 {
+
+}
+.width--3 {
+
+}
+.width--4 {
+
+}
+.width--5 {
+
+}

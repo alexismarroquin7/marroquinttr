@@ -1,15 +1,17 @@
 
-/* .card {
+.container {
+  width: 100%;
   display: flex;
   flex-flow: column wrap;
   gap: 2rem;
-} */
+}
 
 .card_actions {
   width: 100%;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
+  /* justify-content: space-around; */
   gap: 2rem;
 }
 
@@ -32,10 +34,15 @@
 
 }
 
+.card_action:hover {
+  text-decoration: none;
+}
+
 .card_action_secondary {
   background-color: transparent;
   color: var(--color-primary);
 }
+
 
 /* tablet */
 @media (min-width: 768px) {

@@ -6,9 +6,13 @@ import styles from "./index.module.css";
 export const Billing = () => {
   return <Section
   >
-    <h3 className="title_text">{billing.title}</h3>
 
-    <p>{billing.description}</p>
+    <div
+      className={styles.container}
+    >
+      <h3 className="title_text">{billing.title}</h3>
+      <p>{billing.description}</p>
+    </div>
     
     <ul
       className={styles.payment_type_list}
@@ -19,15 +23,6 @@ export const Billing = () => {
           className={styles.payment_type}
         >
           {payment_type.name}
-          {Array.isArray(payment_type.sub_types) && (
-            <ul
-              className={styles.sub_payment_type_list}
-            >
-              {payment_type.sub_types.map(sub_type => {
-                return <li key={sub_type.name}>{sub_type.name}</li>  
-              })}
-            </ul>
-          )}
         </li>
         
       })}

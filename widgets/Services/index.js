@@ -65,16 +65,19 @@ export const Services = () => {
   }, [state.dir]);
 
   return <Section>
-    <h3 className="title_text">{services.title}</h3>
-    <p>{services.description}</p>
+    <div
+      className={styles.container}
+    >
+      <h3 className="title_text">{services.title}</h3>
+      <p>{services.description}</p>
+    </div>
     
     <div
       className={styles.services_list}
     > 
-      {state.list.map(item => {
-        return <ServiceItem key={item.id} service={item}/>
+      {state.list.map((item, i, arr) => {
+        return <ServiceItem key={item.id} service={item} index={i} count={arr.length}/>
       })}
-      
     </div>
   </Section>
 }
